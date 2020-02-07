@@ -1,0 +1,32 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: weihua.yao
+ * @Date: 2020-02-04 18:43:01
+ * @LastEditTime : 2020-02-04 19:06:15
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="jsonp.js"></script>
+</head>
+
+<body>
+
+  <script>
+    jsonp('http://localhost:4399/query').then(res => {
+      console.log(JSON.stringify(res))
+    })
+  </script>
+</body>
+
+<!-- <script src="http://localhost:4399/query?callback=fn"> -->
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: weihua.yao
+ * @Date: 2020-02-07 16:01:55
+ * @LastEditTime : 2020-02-07 16:09:31
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <iframe src="http://localhost:4400/c.html" frameborder="0" id="iframeBox"></iframe>
+  <script>
+    let flag = true
+    iframeBox.onload = () => {
+      if (flag) {
+        // 由于替换 src 后 iframe 会重新执行 onload，而执行 onload 后又会替换 src，故添加flag以防止死循环
+        iframeBox.src = "http://localhost:4399/b.html"
+        flag = false
+      }
+      console.log(iframeBox.contentWindow.name)
+    }
+  </script>
+</body>
+
+</html>

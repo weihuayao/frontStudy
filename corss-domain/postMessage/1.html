@@ -1,0 +1,35 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: weihua.yao
+ * @Date: 2020-02-07 15:29:22
+ * @LastEditTime : 2020-02-07 15:54:25
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <iframe src="http://localhost:4400/2.html" frameborder="0" id="iframe"></iframe>
+  <script>
+    let data1 = {
+      code: 110,
+      message: 'hello 2'
+    }
+
+    iframe.onload = () => {
+      iframe.contentWindow.postMessage(data1, 'http://localhost:4400')
+      window.onmessage = function (event) {
+        console.log(event.data)
+      }
+    }
+  </script>
+</body>
+
+</html>

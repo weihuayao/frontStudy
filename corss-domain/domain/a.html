@@ -1,0 +1,28 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: weihua.yao
+ * @Date: 2020-02-07 16:12:10
+ * @LastEditTime : 2020-02-07 16:59:25
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <iframe src="http://b.test.com:4400/b.html" frameborder="0" id="iframeBox"></iframe>
+  <script>
+    document.domain = 'test.com'
+    iframeBox.onload = () => {
+      console.log(iframeBox.contentWindow.data)
+    }
+  </script>
+</body>
+
+</html>

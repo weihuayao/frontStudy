@@ -1,0 +1,33 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: weihua.yao
+ * @Date: 2020-02-07 15:29:29
+ * @LastEditTime : 2020-02-07 15:53:35
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <body>
+    <script>
+      let data2 = {
+        code: 120,
+        msg: 'B数据!'
+      }
+      window.onmessage = function (e) {
+        console.log(e.data)
+        e.source.postMessage(data2, e.origin)
+      }
+    </script>
+  </body>
+
+</html>

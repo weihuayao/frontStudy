@@ -1,0 +1,30 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: weihua.yao
+ * @Date: 2020-02-07 17:02:45
+ * @LastEditTime : 2020-02-07 17:12:55
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let socket = new WebSocket('ws://localhost:4399');
+    socket.onopen = () => {
+      socket.send('helloWorld')
+    }
+    socket.onmessage =function(e) {
+      console.log(e.data)
+    }
+  </script>
+</body>
+
+</html>
